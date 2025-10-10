@@ -226,12 +226,10 @@ Alex`
 @media (prefers-reduced-motion: reduce) { .flow-node, .carousel-item { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
 
 @media print {
-  .bg-overlay { display: none !important; }
-  .flow-track { display: none !important; }
+  /* Keep visuals similar to screen but flatten transforms */
   .carousel { height: auto; perspective: none; }
   .carousel::before { display: none; }
   .carousel-item { position: static; transform: none !important; filter: none !important; opacity: 1 !important; page-break-inside: avoid; break-inside: avoid; margin-bottom: 1.5rem; }
-  .panel { box-shadow: none; border: 1px solid rgba(148,163,184,0.35); }
   .carousel-item + .carousel-item { page-break-before: always; break-before: page; }
 }
 </style>

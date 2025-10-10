@@ -382,7 +382,8 @@ onMounted(() => {
     position: static;
     width: auto;
     height: auto;
-    background: #fff;
+    /* keep screen background (managed by BackgroundManager); users may need to enable printing backgrounds */
+    background: transparent;
     overflow: visible;
   }
   .slides-viewport {
