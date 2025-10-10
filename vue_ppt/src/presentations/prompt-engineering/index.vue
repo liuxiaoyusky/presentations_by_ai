@@ -16,11 +16,13 @@ import SlideOverview from './slide-02-overview.vue'
 import SlideEquation from './slide-03-core-equation.vue'
 import SlideDefinition from './slide-04-prompt-definition.vue'
 import SlideHowTo from './slide-05-how-to.vue'
+import SlideGoodPromptSubtitle from './slide-05a-good-prompt-example.vue'
 import SlideEmail from './slide-06-examples-email.vue'
 import SlideTpm from './slide-07-examples-tpm.vue'
 import SlidePlanner from './slide-08-examples-planner.vue'
 import SlideLegal from './slide-09-examples-legal.vue'
 import SlideTemplatesCommon from './slide-10-templates-common.vue'
+import SlideChapter2 from './slide-10a-chapter-2.vue'
 import SlideCostar from './slide-11-costar.vue'
 import SlideCostarRole from './slide-12-costar-role.vue'
 import SlideCostarInstructions from './slide-13-costar-instructions.vue'
@@ -28,10 +30,12 @@ import SlideCostarOutput from './slide-14-costar-output.vue'
 import SlideTemplatesRef from './slide-15-templates-reference.vue'
 import SlideTemplatesLLM from './slide-16-templates-llm.vue'
 import SlideTemplatesQA from './slide-17-templates-qa.vue'
+import SlideSecurityMenu from './slide-17a-security-menu.vue'
 import SlideSecurity1 from './slide-18-security-areas-1.vue'
 import SlideSecurity2 from './slide-19-security-areas-2.vue'
 import SlideSecurityQA from './slide-20-security-qa.vue'
 import SlideResOneForAll from './slide-21-resources-oneforall.vue'
+import SlideResourcesMenu from './slide-20a-resources-menu.vue'
 import SlideResPromptGen from './slide-22-resources-promptgen.vue'
 import SlideResMedia from './slide-23-resources-media.vue'
 import SlideResInternal from './slide-24-resources-internal.vue'
@@ -72,10 +76,12 @@ const slides = [
   SlideEquation,
   SlideDefinition,
   SlideHowTo,
+  SlideGoodPromptSubtitle,
   SlideEmail,
   SlideTpm,
   SlidePlanner,
   SlideLegal,
+  SlideChapter2,
   SlideTemplatesCommon,
   SlideCostar,
   SlideCostarRole,
@@ -84,9 +90,11 @@ const slides = [
   SlideTemplatesRef,
   SlideTemplatesLLM,
   SlideTemplatesQA,
+  SlideSecurityMenu,
   SlideSecurity1,
   SlideSecurity2,
   SlideSecurityQA,
+  SlideResourcesMenu,
   SlideResOneForAll,
   SlideResPromptGen,
   SlideResMedia,

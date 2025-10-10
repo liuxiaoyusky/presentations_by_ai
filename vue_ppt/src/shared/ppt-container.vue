@@ -375,4 +375,34 @@ onMounted(() => {
     height: 40px;
   }
 }
+
+/* Print all slides: one per page */
+@media print {
+  .ppt-container {
+    position: static;
+    width: auto;
+    height: auto;
+    background: #fff;
+    overflow: visible;
+  }
+  .slides-viewport {
+    height: auto;
+    overflow: visible;
+  }
+  .slide-wrapper {
+    display: block !important;
+    transform: none !important;
+  }
+  .slide {
+    position: relative;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100vh;
+    break-after: page;
+    page-break-after: always;
+  }
+  .controls,
+  .progress-bar,
+  .thumbnails { display: none !important; }
+}
 </style>

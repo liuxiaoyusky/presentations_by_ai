@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import MarkdownBlock from '@/shared/components/MarkdownBlock.vue'
+
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const title = '2.2.1 Role Definition Analysis'
 const original = `**Role:**  
@@ -18,7 +20,9 @@ const keys = [
     <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#93AD90] via-[#F4CDA5] to-[#E26A6A]">{{ title }}</h2>
     <article class="mt-6 rounded-2xl border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-xl p-6 md:p-8">
       <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Original Role Section</h3>
-      <pre class="mt-3 whitespace-pre-wrap text-slate-800 text-sm md:text-base">{{ original }}</pre>
+      <div class="mt-3 text-slate-800 text-sm md:text-base">
+        <MarkdownBlock :content="original" />
+      </div>
     </article>
     <article class="mt-6 rounded-2xl border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-xl p-6 md:p-8">
       <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Key Elements</h3>

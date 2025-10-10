@@ -1,41 +1,39 @@
 <template>
-  <section
-    class="slide flex min-h-screen w-full items-center justify-center bg-transparent px-4 py-12 text-slate-900 sm:px-8 lg:px-12"
-    :class="{ active: isActive }"
-  >
-    <div
-      class="w-full max-w-5xl rounded-[28px] border border-slate-900/10 bg-white/75 p-6 shadow-2xl shadow-slate-900/10 backdrop-blur-md sm:p-10"
+  <SlideSection center>
+    <h2
+      class="text-center text-5xl md:text-6xl font-black tracking-tight bg-gradient-to-r from-rose-400 via-orange-400 to-amber-300 bg-clip-text text-transparent"
     >
-      <h1
-        class="bg-gradient-to-r from-rose-400 via-orange-400 to-amber-300 bg-clip-text text-center text-4xl font-black tracking-tight text-transparent drop-shadow-[0_0_24px_rgba(249,115,22,0.3)] sm:text-5xl"
-      >
-        {{ t('slide6.title') }}
-      </h1>
+      {{ t('slide6.title') }}
+    </h2>
 
-      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div
-          v-for="card in cards"
-          :key="card.titleKey"
-          class="rounded-2xl border border-slate-900/10 bg-white/85 px-5 py-6 shadow-xl shadow-slate-900/10 backdrop-blur-sm"
-          :class="card.accent"
-        >
-          <div class="text-lg font-black tracking-tight text-slate-900 sm:text-xl">
+    <CardGrid :min-col="'300px'">
+      <CardPanel
+        v-for="card in cards"
+        :key="card.titleKey"
+        :class="card.accent"
+      >
+        <template #header>
+          <div class="text-2xl md:text-3xl font-bold text-slate-900">
             {{ t(card.titleKey) }}
           </div>
-          <div class="mt-2 text-sm font-semibold text-slate-600" v-html="t(card.subtitleKey)" />
-        </div>
-      </div>
-    </div>
-  </section>
+        </template>
+        <div class="mt-2 text-base md:text-lg text-slate-700" v-html="t(card.subtitleKey)" />
+      </CardPanel>
+    </CardGrid>
+  </SlideSection>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 
+import SlideSection from '@/shared/layouts/SlideSection.vue'
+import CardGrid from '@/shared/layouts/CardGrid.vue'
+import CardPanel from '@/shared/layouts/CardPanel.vue'
+
 import { useDeckI18n } from '../../shared/i18n/use-deck-i18n'
 import { usePresentationContext } from '../../shared/presentation/presentation-context'
 
-const props = defineProps({ isActive: Boolean, isPreview: Boolean })
+defineProps({ isActive: Boolean, isPreview: Boolean })
 
 const presentationContext = usePresentationContext()
 

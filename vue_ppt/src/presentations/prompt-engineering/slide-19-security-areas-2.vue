@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-const title = '3. Data Security & Privacy — Risk Areas (Abuse/Access/Storage)'
+const title = 'Data Security & Privacy — Risk Areas (Abuse/Access/Storage)'
 const table2 = `| Risk Area | Description | Solutions |
 |-----------|-------------|-----------|
 | **Abuse** | Models can be misused; enforce limits/monitoring (e.g., no investment advice in support workflows) | • Rate limits/quotas<br>• Behavior monitoring<br>• Prompt-level guardrails |

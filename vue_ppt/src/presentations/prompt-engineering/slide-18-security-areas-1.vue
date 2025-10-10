@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-const title = '3. Data Security & Privacy — Risk Areas (Input/Output)'
+const title = 'Data Security & Privacy — Risk Areas (Input/Output)'
 const table1 = `| Risk Area | Description | Solutions |
 |-----------|-------------|-----------|
 | **Input** | Users may share Personal information, financial, or confidential data — be cautious | • Minimize data<br>• Filter inappropriate content |
