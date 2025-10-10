@@ -49,6 +49,11 @@ Use these instead of ad‑hoc CSS where possible. Prefer Tailwind utilities with
   - Use consistent soft cards for content blocks (see `CardPanel.vue`).
 - Target overall scale: when in doubt, increase component and font sizing by ~30–35% over baseline app UI for presentation contexts.
 
+## Header & Scroll Behavior
+- Fixed title position is optional. Choose the layout that best fits the slide’s content and visual hierarchy.
+- For long content, constrain the content panel height and allow internal scrolling (overflow auto) so the background and shell remain stable.
+- Prefer `whitespace-pre-wrap` and `break-words` for long preformatted blocks to avoid horizontal overflow.
+
 ## Paths
 - Template reference deck: `vue_ppt/src/presentations/design-language-template/`
 - Prompt deck example: `vue_ppt/src/presentations/prompt-engineering/`
