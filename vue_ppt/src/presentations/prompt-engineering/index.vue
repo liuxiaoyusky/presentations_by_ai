@@ -8,14 +8,37 @@ import {
   createPresentationContext,
   providePresentationContext
 } from '../../shared/presentation/presentation-context'
-import { useDeckI18n } from '../../shared/i18n/use-deck-i18n'
 
 import PptContainer from '@/shared/ppt-container.vue'
 
-import SlideCover from './slide-1-cover.vue'
-import SlideOverview from './slide-2-overview.vue'
-import SlideEquation from './slide-3-equation.vue'
-import SlideDefinition from './slide-4-definition.vue'
+import SlideCover from './slide-01-cover.vue'
+import SlideOverview from './slide-02-overview.vue'
+import SlideEquation from './slide-03-core-equation.vue'
+import SlideDefinition from './slide-04-prompt-definition.vue'
+import SlideHowTo from './slide-05-how-to.vue'
+import SlideEmail from './slide-06-examples-email.vue'
+import SlideTpm from './slide-07-examples-tpm.vue'
+import SlidePlanner from './slide-08-examples-planner.vue'
+import SlideLegal from './slide-09-examples-legal.vue'
+import SlideTemplatesCommon from './slide-10-templates-common.vue'
+import SlideCostar from './slide-11-costar.vue'
+import SlideCostarRole from './slide-12-costar-role.vue'
+import SlideCostarInstructions from './slide-13-costar-instructions.vue'
+import SlideCostarOutput from './slide-14-costar-output.vue'
+import SlideTemplatesRef from './slide-15-templates-reference.vue'
+import SlideTemplatesLLM from './slide-16-templates-llm.vue'
+import SlideTemplatesQA from './slide-17-templates-qa.vue'
+import SlideSecurity1 from './slide-18-security-areas-1.vue'
+import SlideSecurity2 from './slide-19-security-areas-2.vue'
+import SlideSecurityQA from './slide-20-security-qa.vue'
+import SlideResOneForAll from './slide-21-resources-oneforall.vue'
+import SlideResPromptGen from './slide-22-resources-promptgen.vue'
+import SlideResMedia from './slide-23-resources-media.vue'
+import SlideResInternal from './slide-24-resources-internal.vue'
+import SlideResOthers1 from './slide-25-resources-others-1.vue'
+import SlideResOthers2 from './slide-26-resources-others-2.vue'
+import SlideResLearning from './slide-27-resources-learning.vue'
+import SlideTakeaways from './slide-28-takeaways.vue'
 // Additional slides will be reintroduced after polishing 1–4
 // Demo-first: keep it minimal
 
@@ -40,19 +63,38 @@ const presentationContext = createPresentationContext({
 
 providePresentationContext(presentationContext)
 
-const { t } = useDeckI18n('prompt-engineering', {
-  locale: computed(() => presentationContext.state.locale),
-  fallbackLocale: 'en'
-})
-
-const deckTitle = computed(() => t('meta.title'))
-const thumbnailsLabel = computed(() => t('labels.thumbnails'))
+const deckTitle = computed(() => 'Intro to Prompt Engineering')
+const thumbnailsLabel = computed(() => 'Slide previews')
 
 const slides = [
   SlideCover,
   SlideOverview,
   SlideEquation,
-  SlideDefinition
+  SlideDefinition,
+  SlideHowTo,
+  SlideEmail,
+  SlideTpm,
+  SlidePlanner,
+  SlideLegal,
+  SlideTemplatesCommon,
+  SlideCostar,
+  SlideCostarRole,
+  SlideCostarInstructions,
+  SlideCostarOutput,
+  SlideTemplatesRef,
+  SlideTemplatesLLM,
+  SlideTemplatesQA,
+  SlideSecurity1,
+  SlideSecurity2,
+  SlideSecurityQA,
+  SlideResOneForAll,
+  SlideResPromptGen,
+  SlideResMedia,
+  SlideResInternal,
+  SlideResOthers1,
+  SlideResOthers2,
+  SlideResLearning,
+  SlideTakeaways
 ]
 </script>
 

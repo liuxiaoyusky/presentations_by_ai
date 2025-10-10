@@ -1,34 +1,21 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-
-import { useDeckI18n } from '../../shared/i18n/use-deck-i18n'
-import { usePresentationContext } from '../../shared/presentation/presentation-context'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
-const presentationContext = usePresentationContext()
-
-const { t } = useDeckI18n('prompt-engineering', {
-  locale: computed(() => presentationContext.state.locale),
-  fallbackLocale: 'en'
-})
-
-const agendaItems = computed(() => [
-  t('slides.overview.agenda.item1'),
-  t('slides.overview.agenda.item2'),
-  t('slides.overview.agenda.item3'),
-  t('slides.overview.agenda.item4'),
-  t('slides.overview.agenda.item5')
-])
+const title = 'Overview'
+const oneLiner = 'Prompt engineering turns vague asks into reliable AI output.'
+const agendaItems = [
+  'Understanding Prompts',
+  'Templates',
+  'Data Security & Privacy',
+  'Resources',
+  'Key Takeaways'
+]
 </script>
 
 <template>
   <section class="container mx-auto max-w-7xl px-8 md:px-10 lg:px-12 py-10 md:py-14">
     <div class="mb-8">
-      <h2 class="inline-block text-6xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#93AD90] via-[#F4CDA5] to-[#E26A6A]">
-        {{ t('slides.overview.title') }}
-      </h2>
-      <p class="mt-4 text-xl md:text-2xl text-slate-700">{{ t('slides.overview.oneLiner') }}</p>
+      <h2 class="inline-block text-6xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#93AD90] via-[#F4CDA5] to-[#E26A6A]">{{ title }}</h2>
+      <p class="mt-4 text-xl md:text-2xl text-slate-700">{{ oneLiner }}</p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

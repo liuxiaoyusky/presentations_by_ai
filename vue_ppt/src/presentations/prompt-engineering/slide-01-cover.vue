@@ -1,17 +1,9 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-
-import { useDeckI18n } from '../../shared/i18n/use-deck-i18n'
-import { usePresentationContext } from '../../shared/presentation/presentation-context'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
-const presentationContext = usePresentationContext()
-
-const { t } = useDeckI18n('prompt-engineering', {
-  locale: computed(() => presentationContext.state.locale),
-  fallbackLocale: 'en'
-})
+const kicker = 'Workshop'
+const title = 'Intro to Prompt Engineering'
+const subtitle = 'Better questions elicit better answers.'
+const footnote = 'Prompt engineering is the lever that upgrades responses from 60 to 80.'
 </script>
 
 <template>
@@ -45,18 +37,10 @@ const { t } = useDeckI18n('prompt-engineering', {
 
       <div class="relative z-10 grid place-items-center px-6 py-12 md:py-16">
         <div class="text-center">
-          <span class="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 px-4 py-1.5 text-slate-700 backdrop-blur">
-            {{ t('slides.cover.kicker') }}
-          </span>
-          <h1 class="mt-4 text-6xl md:text-8xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#93AD90] via-[#F4CDA5] to-[#E26A6A]">
-            {{ t('slides.cover.title') }}
-          </h1>
-          <p class="mt-5 text-xl md:text-3xl text-slate-700">
-            {{ t('slides.cover.subtitle') }}
-          </p>
-          <p class="mt-3 text-base md:text-lg text-slate-600">
-            {{ t('slides.cover.footnote') }}
-          </p>
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 px-4 py-1.5 text-slate-700 backdrop-blur">{{ kicker }}</span>
+          <h1 class="mt-4 text-6xl md:text-8xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#93AD90] via-[#F4CDA5] to-[#E26A6A]">{{ title }}</h1>
+          <p class="mt-5 text-xl md:text-3xl text-slate-700">{{ subtitle }}</p>
+          <p class="mt-3 text-base md:text-lg text-slate-600">{{ footnote }}</p>
         </div>
       </div>
     </div>
