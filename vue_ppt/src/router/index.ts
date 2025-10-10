@@ -22,6 +22,14 @@ const router = createRouter({
     {
       path: '/ai-skill-tree',
       component: () => import('@/presentations/ai-skill-tree/index.vue')
+    },
+    {
+      path: '/ai-skill-tree-cool',
+      component: () => import('@/presentations/ai-skill-tree-cool/index.vue')
+    },
+    {
+      path: '/prompt-engineering',
+      component: () => import('@/presentations/prompt-engineering/index.vue')
     }
   ],
 })

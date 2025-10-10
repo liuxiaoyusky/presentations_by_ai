@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "AI Skill Tree · Neon Remix"
+  },
+  "hero": {
+    "title": "Neon AI Skill Tree",
+    "subtitle": "Blend the dazzling demo atmosphere with the interactive skill journey."
+  },
+  "labels": {
+    "currentBackground": "Current background",
+    "activeLocale": "Language",
+    "openSettingsHint": "Use {shortcut} to open the background and locale panel",
+    "thumbnails": "Slide thumbnails"
+  },
+  "locales": {
+    "zh-Hans": {
+      "label": "Chinese (Simplified)",
+      "nativeLabel": "简体中文"
+    },
+    "en": {
+      "label": "English",
+      "nativeLabel": "English"
+    }
+  }
+}

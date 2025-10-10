@@ -27,6 +27,12 @@ const categories = ref<Category[]>([
         title: 'AI Skill Tree ',
         description: '点亮隐藏技能树的关键节点',
         route: '/ai-skill-tree'
+      },
+      {
+        id: 'ai-skill-tree-cool',
+        title: 'AI Skill Tree · Neon Remix',
+        description: '炫酷演示的霓虹氛围 + 技能树互动体验',
+        route: '/ai-skill-tree-cool'
       }
     ]
   },
@@ -40,6 +46,12 @@ const categories = ref<Category[]>([
         title: 'Demo Presentation',
         description: '具有现代功能的交互式演示演示',
         route: '/demo'
+      },
+      {
+        id: 'prompt-engineering',
+        title: 'Intro to Prompt Engineering',
+        description: 'Prompt engineering workshop deck (EN)',
+        route: '/prompt-engineering'
       },
       {
         id: 'qwen3-next-bench',

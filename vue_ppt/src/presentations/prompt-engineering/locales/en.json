@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "title": "Intro to Prompt Engineering"
+  },
+    "labels": {
+      "thumbnails": "Slide previews"
+    },
+    "slides": {
+    "themeDemo": {
+      "kicker": "Theme Demo",
+      "title": "Prompt Deck — Sample Theme",
+      "subtitle": "Typography, tokens, and controls preview",
+      "typography": {
+        "title": "Typography",
+        "lead": "Headlines use heavy weights with tight tracking.",
+        "point1": "Title: clamp(2rem–3.2rem), 800 weight",
+        "point2": "Body: readable contrast with muted text"
+      },
+      "tokens": {
+        "title": "Design tokens"
+      },
+      "controls": {
+        "title": "Controls",
+        "hint": "Keyboard shortcuts you can try now:",
+        "nav": "Arrow keys or Space to navigate",
+        "overlay": "Cmd/Ctrl + Shift + P to open settings",
+        "close": "Esc toggles thumbnails"
+      }
+    },
+      "cover": {
+        "kicker": "Workshop",
+        "title": "Intro to Prompt Engineering",
+        "subtitle": "Better questions elicit better answers.",
+        "footnote": "Prompt engineering is the lever that upgrades responses from 60 to 80.",
+        "remix": "AI Skill Tree Remix"
+      },
+    "overview": {
+      "title": "Overview",
+      "oneLiner": "Prompt engineering turns vague asks into reliable AI output.",
+      "agendaHeading": "Today's roadmap",
+      "agenda": {
+        "item1": "Understanding Prompts",
+        "item2": "Templates",
+        "item3": "Data Security & Privacy",
+        "item4": "Resources",
+        "item5": "Key Takeaways"
+      }
+    },
+    "equation": {
+      "title": "The Core Equation",
+      "formula": "Model Performance = LLM × (Tools + Prompt)",
+      "description": "Prompts stay the highest leverage input because they cost nothing, iterate fast, and change outcomes immediately.",
+      "componentsHeading": "Three pieces to set up",
+      "components": {
+        "llm": {
+          "title": "LLM",
+          "description": "Hosted models (ChatGPT, Gemini, DeepSeek, Grok) provide the capability ceiling."
+        },
+        "tools": {
+          "title": "Tools",
+          "description": "Plugins, APIs, or automations give the model fresh context and the ability to act."
+        },
+        "prompt": {
+          "title": "Prompt",
+          "description": "Clear instructions steer the model toward the result you actually need."
+        }
+      },
+      "tip": "Many MVPs ship with hosted APIs + prompt design + retrieval (RAG)."
+    },
+    "promptDefinition": {
+      "title": "What is a prompt?",
+      "definition": "A prompt is the input message that guides the model to the desired response.",
+      "formula": "prompt = task + background + output",
+      "componentsHeading": "Key ingredients",
+      "components": {
+        "task": {
+          "title": "Task",
+          "description": "The actual job: request, question, or goal."
+        },
+        "background": {
+          "title": "Background",
+          "description": "Context that frames the request—audience, tone, constraints."
+        },
+        "output": {
+          "title": "Output",
+          "description": "The format, structure, or deliverable you expect back."
+        }
+      },
+      "exampleHeading": "Example",
+      "example": {
+        "task": {
+          "label": "Task",
+          "value": "Email my manager about requesting time off next week."
+        },
+        "background": {
+          "label": "Background",
+          "value": "Be professional, emphasize I planned ahead."
+        },
+        "output": {
+          "label": "Output",
+          "value": "Provide subject line plus full email body."
+        }
+      }
+    },
+    "whyPromptsMatter": {
+      "title": "Why prompts matter",
+      "analogy": "AI is autopilot: anyone can ride, but steering is how you avoid turbulence.",
+      "benefitsHeading": "Prompt design delivers",
+      "benefits": [
+        "Higher accuracy on the first try",
+        "Readable, reusable instructions for agents",
+        "Stable responses that reduce rework",
+        "Lower cost from fewer regenerations"
+      ]
+    },
+    "principlesIntro": {
+      "title": "Prompt design principles",
+      "subtitle": "Seven habits shape great prompts.",
+      "principles": [
+        "Accurate wording",
+        "Specificity",
+        "Conciseness",
+        "Unambiguity",
+        "Helpful guidance",
+        "Structure",
+        "Provide examples"
+      ]
+    },
+    "howToWrite": {
+      "title": "How to Write Good Prompts",
+      "keyInsight": "Good prompts are tuned, not born.",
+      "notes": {
+        "n1": "Domain expertise matters",
+        "n2": "If a coworker doesn't understand your prompt, the AI probably won't either"
+      }
+    },
+    "examples": {
+      "email": {
+        "title": "1.5.1 Email Writer",
+        "context": "Professional workplace communication requiring polite, concise, and collaborative tone.",
+        "template": "```markdown\nContext:\nI work in a professional environment and often need to email my coworkers. The tone should be polite, concise, and collaborative. The emails may involve updates, requests, or responses.\n\nObjective:\nHelp me draft or edit an email that communicates my message effectively while maintaining professionalism and clarity.\n\nStyle:\nUse a tone that is:\n\nCourteous but direct\nNeutral and professional (avoid overly formal or casual phrasing)\nConcise — focus on clarity and purpose\nCulturally appropriate for workplace communication\n\nTask:\nWrite or refine my email to ensure it:\n\nHas a clear subject line and logical structure\nOpens with context or appreciation\nStates the main message or request succinctly\nEnds with a polite closing and call to action (if needed)\nOptionally includes a short sign-off\n\nAction:\nI will provide my rough draft or main points. You will return a polished, professional email version ready to send.\n\nResult:\nA final email draft that is polite, concise, and professional — suitable for workplace communication.\n```",
+        "sampleInput": "I need to email my manager about requesting time off next week for a family event.\nI want to be professional but also show that I've planned ahead.",
+        "sampleOutputNoPrompt": "Subject: Request for Time Off – [Your Full Name] (Next Week, [Date Range])\n\nDear [Manager’s Name],\n\nI hope this email finds you well. I am writing to formally request time off from work next week to attend an important family event – specifically, from Monday, October 14th to  Friday, October 18th. This event has been planned in advance, and I have taken steps to ensure my responsibilities are fully covered during my absence to minimize any impact on the team’s workflow.\n\nTo prepare for this time off:\n...(500 words detail)...\n\nThank you,\nSky",
+        "sampleOutputPrompt": "Subject: Request for Time Off - March 15-17, 2024\n\nHi Sarah,\n\nI hope this email finds you well. I would like to request time off from March 15th to March 17th for a family event.\n\nI have ensured that all my current projects are on track and have coordinated with John to cover any urgent matters during my absence.\n\nThank you for considering my request. Please let me know if you need any additional information.\n\nBest regards,\nAlex"
+      },
+      "tpm": {
+        "title": "1.5.2 Technical Project Manager",
+        "context": "First-principles analysis for IT/software projects with structured technical planning. See 2.2 Co-STAR Framework for comprehensive breakdown of this prompt structure.",
+        "sampleInput": "We need to build a customer feedback system that collects reviews, analyzes sentiment, and generates reports for our e-commerce platform. The system should handle 10,000+ reviews per day and integrate with our existing CRM.",
+        "sampleOutput": "1. **Task Summary:** Build a scalable customer feedback analysis system for e-commerce platform\n\n2. **Core Problem / Goal:** Collect, process, and analyze customer reviews to generate actionable insights\n\n3. **First Principles Breakdown:**\n   - Data collection (reviews) → Processing (sentiment analysis) → Output (reports)\n   - Scale requirement: 10,000+ reviews/day\n   - Integration requirement: Existing CRM system\n\n4. **Minimum Viable Components:**\n   - Review collection API\n   - Sentiment analysis engine\n   - Report generation service\n   - CRM integration layer\n\n5. **Technical To-Do / Staged Plan:**\n   - **Stage 1: Foundation** — API design, database schema, basic collection\n   - **Stage 2: Processing** — Sentiment analysis integration, data pipeline\n   - **Stage 3: Intelligence** — Report generation, CRM integration, monitoring\n\n6. **Key Success Metrics:**\n   - Processing capacity: 10,000+ reviews/day\n   - Accuracy: 95%+ sentiment classification\n   - Response time: <2 seconds for report generation\n   - Uptime: 99.9% availability"
+      },
+      "planner": {
+        "title": "1.5.3 Daily Job Planner",
+        "template": "```markdown\n## 🧠 Prompt:\nYou are a professional AI assistant that builds optimized daily job plans. The user may provide **any combination** of the following as input:\n- A screenshot of a calendar  \n- A screenshot of a to-do list  \n- A written to-do list or notes of things they want to do  \n\nYour job is to intelligently extract and combine all input information to create a **realistic, well-structured job schedule** for the day.\n\n---\n\n## 🕘 Constraints:\n- **Working hours:** 09:00 – 18:00  \n- **Lunch break:** 12:15 – 13:30 (leave this time free)  \n- Do not double-book tasks over existing calendar events  \n- Merge duplicate or overlapping tasks if needed  \n- Prioritize urgent/time-sensitive items  \n- Leave room for short breaks when possible\n\n---\n\n## 📋 Output Format:\nReturn the final daily plan in a clean, professional **table format** with these columns:\n\n| 🕒 Time       | ✅ Task              | 📌 Notes (optional)     |\n|--------------|---------------------|--------------------------|\n```",
+        "sampleInput": "I have these tasks for today:\n- Team meeting at 10:00 AM (already scheduled)\n- Finish quarterly report\n- Call client about project update\n- Review code changes\n- Prepare presentation for tomorrow\n\nI also have a dentist appointment at 2:00 PM that I forgot to mention.",
+        "sampleOutput": "| 🕒 Time       | ✅ Task              | 📌 Notes (optional)     |\n|--------------|---------------------|--------------------------|\n| 09:00-10:00  | Finish quarterly report | Priority task, quiet time |\n| 10:00-11:00  | Team meeting        | Already scheduled        |\n| 11:00-11:30  | Call client         | Project update discussion |\n| 11:30-12:15  | Review code changes | Before lunch break       |\n| 12:15-13:30  | Lunch break         | Free time                |\n| 13:30-14:00  | Prepare presentation | Quick prep for tomorrow  |\n| 14:00-15:00  | Dentist appointment | Already scheduled        |\n| 15:00-16:00  | Continue quarterly report | Complete remaining sections |\n| 16:00-17:00  | Final review        | Check all completed tasks |\n| 17:00-18:00  | Buffer time         | Handle any urgent items  |"
+      },
+      "legal": {
+        "title": "1.5.4 Legal Counsel",
+        "template": "```markdown\n**Role**: You are a senior legal counsel with expertise in Hong Kong contract law.\n\n**Task**: Review the following sales contract clause, identify potential legal and commercial risks under Hong Kong law, and provide suggested revisions.\n\n**Clause to Review**:\n\"Party B shall deliver the goods within 3 working days after receiving the payment. In case of delayed delivery, a penalty of 0.1% of the contract amount per day will be charged.\"\n\n**Output Requirements**:\n\nIdentify and explain each potential risk point, considering enforceability under Hong Kong law\n\nProvide references to relevant legal principles or case law where applicable (e.g., penalty vs. liquidated damages doctrine)\n\nDraft a revised version of the clause to mitigate risk and improve enforceability\n\nFormat: Present your analysis in bullet points; use bold to highlight key legal issues or recommendations\n```",
+        "sampleInput": "Review this clause: \"Party B shall deliver the goods within 3 working days after receiving the payment. In case of delayed delivery, a penalty of 0.1% of the contract amount per day will be charged.\"",
+        "riskAnalysis": "• **Penalty Clause Risk**: The 0.1% daily penalty may be deemed unenforceable under Hong Kong law as it could constitute a penalty rather than liquidated damages\n\n• **Uncertainty in \"Working Days\"**: The term \"working days\" is ambiguous and may lead to disputes about calculation methods\n\n• **No Force Majeure Protection**: The clause lacks protection for circumstances beyond Party B's control",
+        "legalReferences": "• **Dunlop Pneumatic Tyre Co Ltd v New Garage & Motor Co Ltd [1915]**: Establishes the test for distinguishing penalties from liquidated damages\n• **Hong Kong Contract Law**: Penalties are unenforceable if they are extravagant and unconscionable",
+        "revisedClause": "\"Party B shall deliver the goods within 3 business days (Monday to Friday, excluding public holidays) after receiving the payment. In case of delayed delivery due to Party B's fault, liquidated damages of 0.05% of the contract amount per day will be charged, subject to a maximum of 5% of the total contract value. This provision shall not apply in cases of force majeure or circumstances beyond Party B's reasonable control.\""
+      }
+    },
+    "principlesSpotlightA": {
+      "title": "Precision in practice",
+      "items": [
+        {
+          "title": "Accurate wording",
+          "description": "Use standard vocabulary, action verbs, and correct grammar.",
+          "exampleBad": "Tell me about this year's worldwide soccer game.",
+          "exampleGood": "In which country will the 2024 FIFA World Cup be held?"
+        },
+        {
+          "title": "Specificity",
+          "description": "Supply industry, metrics, and any background that narrows the answer.",
+          "exampleBad": "Analyze the portfolio.",
+          "exampleGood": "Analyze this marketing portfolio with a focus on brand positioning and market share."
+        },
+        {
+          "title": "Conciseness",
+          "description": "Trim filler; crisp prompts are easier for the model to follow.",
+          "exampleBad": "Can you help me write something about AI and ML including many industries…",
+          "exampleGood": "Write a 200-word overview of AI uses in healthcare, finance, and tech."
+        }
+      ]
+    },
+    "principlesSpotlightB": {
+      "title": "Clarity and scaffolding",
+      "items": [
+        {
+          "title": "Unambiguity",
+          "description": "Explain what you mean when multiple interpretations exist.",
+          "example": "Specify the company, timeframe, or metric you want."
+        },
+        {
+          "title": "Helpful guidance",
+          "description": "Share evaluation criteria, tone, or tools the model can use.",
+          "example": "Add scoring rubrics, references, or checklists to keep answers aligned."
+        },
+        {
+          "title": "Structure & examples",
+          "description": "Present numbered steps or sample outputs so the model mirrors them.",
+          "example": "Use Co-STAR or provide one good answer for the model to imitate."
+        }
+      ]
+    },
+    "security": {
+      "title": "Data security & privacy",
+      "intro": "Treat prompts like production input—protect people and data.",
+      "areas": [
+        {
+          "title": "Input",
+          "description": "Avoid sending personal or confidential details unless contracts allow it.",
+          "actions": "Minimize data, filter sensitive fields."
+        },
+        {
+          "title": "Output",
+          "description": "Models can leak patterns or confidential insight—review before sharing.",
+          "actions": "Add post-generation filters and human review for critical cases."
+        },
+        {
+          "title": "Abuse & access",
+          "description": "Limit who can run prompts and monitor for misuse.",
+          "actions": "Use MFA, rate limits, audits, and prompt guardrails."
+        },
+        {
+          "title": "Storage",
+          "description": "Lock down saved prompts and responses.",
+          "actions": "Encrypt at rest and apply least-privilege permissions."
+        }
+      ]
+    },
+    "resources": {
+      "title": "Resources",
+      "categories": [
+        {
+          "title": "All-purpose chat",
+          "items": [
+            "OpenAI ChatGPT",
+            "Doubao Chat",
+            "Moonshot Kimi",
+            "Perplexity Pro"
+          ]
+        },
+        {
+          "title": "Prompt creation tools",
+          "items": [
+            "Prompt Pilot",
+            "Kimi Prompt Expert",
+            "Prompt Engineer (GPTs)"
+          ]
+        },
+        {
+          "title": "Media generation",
+          "items": [
+            "Jimeng",
+            "Runway ML",
+            "Leonardo AI"
+          ]
+        },
+        {
+          "title": "Internal enablers",
+          "items": [
+            "VPai",
+            "Internal N8N",
+            "Shared subscription accounts"
+          ]
+        },
+        {
+          "title": "Learning",
+          "items": [
+            "OpenAI best practices",
+            "Prompt Engineering Guide",
+            "Andrew Ng short course",
+            "Awesome Prompts"
+          ]
+        }
+      ]
+    },
+    "takeaways": {
+      "title": "Key takeaways",
+      "points": [
+        "Prompts are engineering work—iterate deliberately.",
+        "Structure guides output; frameworks like Co-STAR help.",
+        "Context wins—share role, background, and examples.",
+        "Protect data at every step before productionizing.",
+        "Leverage free and internal resources to experiment faster."
+      ],
+      "closing": "Thanks for listening!"
+    },
+    "qa": {
+      "title": "Q&A",
+      "subtitle": "Ask me anything about prompts."
+    }
+  }
+}

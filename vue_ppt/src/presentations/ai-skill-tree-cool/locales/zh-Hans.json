@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "AI 技能树 · 炫酷互动版"
+  },
+  "hero": {
+    "title": "炫酷 AI 技能树",
+    "subtitle": "把炫酷演示的霓虹氛围与技能树互动体验结合在一起。"
+  },
+  "labels": {
+    "currentBackground": "当前背景",
+    "activeLocale": "语言",
+    "openSettingsHint": "使用 {shortcut} 打开背景与语言面板",
+    "thumbnails": "幻灯片预览"
+  },
+  "locales": {
+    "zh-Hans": {
+      "label": "简体中文",
+      "nativeLabel": "简体中文"
+    },
+    "en": {
+      "label": "英语",
+      "nativeLabel": "English"
+    }
+  }
+}
