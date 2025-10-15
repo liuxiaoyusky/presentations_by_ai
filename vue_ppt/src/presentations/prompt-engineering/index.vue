@@ -30,9 +30,7 @@ import SlideCostarOutput from './slide-14-costar-output.vue'
 import SlideTemplatesRef from './slide-15-templates-reference.vue'
 import SlideTemplatesLLM from './slide-16-templates-llm.vue'
 import SlideTemplatesQA from './slide-17-templates-qa.vue'
-import SlideSecurityMenu from './slide-17a-security-menu.vue'
 import SlideSecurity1 from './slide-18-security-areas-1.vue'
-import SlideSecurity2 from './slide-19-security-areas-2.vue'
 import SlideSecurityQA from './slide-20-security-qa.vue'
 import SlideResOneForAll from './slide-21-resources-oneforall.vue'
 import SlideResourcesMenu from './slide-20a-resources-menu.vue'
@@ -89,9 +87,7 @@ const slides = [
   SlideTemplatesRef,
   SlideTemplatesLLM,
   SlideTemplatesQA,
-  SlideSecurityMenu,
   SlideSecurity1,
-  SlideSecurity2,
   SlideSecurityQA,
   SlideResourcesMenu,
   SlideResOneForAll,

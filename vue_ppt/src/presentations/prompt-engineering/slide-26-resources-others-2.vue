@@ -4,10 +4,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const title = '4.5 Other Services'
 const table = `| Service | Type | Website | Access | Notes |
 |---------|------|---------|--------|-------|
-| **IMA** | Knowledge base | url(https://ima.ai) | Free | • AI knowledge management\\n• Document processing |
-| **Tavily** | Search API | url(https://tavily.com) | Free tier | • AI-powered search\\n• Real-time information |
-| **Jina** | AI platform | url(https://jina.ai) | Free tier | • Document processing\\n• Multimodal AI |
-| **Ollama** | Local models | url(https://ollama.ai) | Free | • Run models locally\\n• Privacy-focused |`
+
 </script>
 
 <template>

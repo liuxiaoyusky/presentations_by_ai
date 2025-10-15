@@ -3,9 +3,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const title = 'Data Security & Privacy — Risk Areas (Abuse/Access/Storage)'
 const table2 = `| Risk Area | Description | Solutions |
 |-----------|-------------|-----------|
-| **Abuse** | Models can be misused; enforce limits/monitoring (e.g., no investment advice in support workflows) | • Rate limits/quotas<br>• Behavior monitoring<br>• Prompt-level guardrails |
-| **Access Control** | Restrict who/what can access models and interfaces | • MFA (Multi-Factor Authentication)<br>• Periodic audits/log reviews |
-| **Storage** | Sensitive data at rest | • Encrypt<br>• Least-privilege access<br>• Prefer internal models for sensitive scenarios |`
+
 </script>
 
 <template>

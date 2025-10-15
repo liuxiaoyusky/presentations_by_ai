@@ -1,10 +1,13 @@
 <script setup lang="ts">
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-const title = 'Data Security & Privacy — Risk Areas (Input/Output)'
+const title = '3. Data Security & Privacy'
 const table1 = `| Risk Area | Description | Solutions |
 |-----------|-------------|-----------|
 | **Input** | Users may share Personal information, financial, or confidential data — be cautious | • Minimize data<br>• Filter inappropriate content |
-| **Output** | LLMs can leak internal patterns; filter outputs to avoid sensitive disclosures | • Post-generation filters<br>• Human review for critical use |`
+| **Output** | LLMs can leak internal patterns; filter outputs to avoid sensitive disclosures | • Post-generation filters<br>• Human review for critical use |
+| **Abuse** | Models can be misused; enforce limits/monitoring (e.g., no investment advice in support workflows) | • Rate limits/quotas<br>• Behavior monitoring<br>• Prompt-level guardrails |
+| **Access Control** | Restrict who/what can access models and interfaces | • MFA (Multi-Factor Authentication)<br>• Periodic audits/log reviews |
+| **Storage** | Sensitive data at rest | • Encrypt<br>• Least-privilege access<br>• Prefer internal models for sensitive scenarios |`
 </script>
 
 <template>
