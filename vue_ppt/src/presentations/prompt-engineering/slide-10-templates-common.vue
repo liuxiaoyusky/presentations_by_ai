@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-const title = '2.1 Common Frameworks'
+const title = '2.1 General Framework'
 const composite = 'Composite (simplified): Task + Background + Output'
 const note = 'Note: Not mandatory — clarity and accuracy trump everything. Think of essay structures (thesis + evidence + counter + conclusion).'
 </script>

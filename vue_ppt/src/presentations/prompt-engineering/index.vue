@@ -40,7 +40,6 @@ import SlideResPromptGen from './slide-22-resources-promptgen.vue'
 import SlideResMedia from './slide-23-resources-media.vue'
 import SlideResInternal from './slide-24-resources-internal.vue'
 import SlideResOthers1 from './slide-25-resources-others-1.vue'
-import SlideResOthers2 from './slide-26-resources-others-2.vue'
 import SlideResLearning from './slide-27-resources-learning.vue'
 import SlideTakeaways from './slide-28-takeaways.vue'
 // Additional slides will be reintroduced after polishing 1–4
@@ -100,7 +99,6 @@ const slides = [
   SlideResMedia,
   SlideResInternal,
   SlideResOthers1,
-  SlideResOthers2,
   SlideResLearning,
   SlideTakeaways
 ]
