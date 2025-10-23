@@ -294,7 +294,7 @@ const mdOutput = `# Slide 1: Understanding CoSTAR and Markdown
 .flow-connector { flex: 0 0 auto; display: flex; align-items: center; width: clamp(3rem, 6vw, 4.2rem); height: clamp(1.4rem, 3.5vw, 2.1rem); }
 .flow-connector svg { width: 100%; height: 100%; }
 
-.carousel { position: relative; width: 100%; max-width: 1100px; height: clamp(420px, 64vh, 600px); margin-top: clamp(1.5rem, 4vw, 2.2rem); perspective: 1400px; }
+.carousel { position: relative; width: 100%; max-width: 1100px; height: clamp(380px, 58vh, 480px); margin-top: clamp(1.5rem, 4vw, 2.2rem); perspective: 1400px; }
 .carousel::before { content: ''; position: absolute; inset: auto; bottom: -110px; left: 50%; width: clamp(420px, 70%, 760px); height: 240px; transform: translateX(-50%); background: radial-gradient(circle, rgba(15, 23, 42, 0.22), transparent 70%); filter: blur(32px); z-index: 0; }
 .carousel-item { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transition: transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1), opacity 320ms ease, filter 320ms ease; will-change: transform; }
 .panel { width: clamp(360px, 88%, 960px); max-height: 100%; display: flex; flex-direction: column; overflow: hidden; border-radius: 20px; box-shadow: 0 40px 80px rgba(15, 23, 42, 0.22); border: 1px solid rgba(255, 255, 255, 0.35); background: rgba(255, 255, 255, 0.95); padding: clamp(1rem, 3vw, 1.5rem); }
@@ -329,7 +329,7 @@ const mdOutput = `# Slide 1: Understanding CoSTAR and Markdown
   .flow-node { border-radius: 16px; padding: 1rem 1.2rem; }
   .flow-number { width: 2rem; height: 2rem; }
   .flow-connector { display: none; }
-  .carousel { height: clamp(360px, 60vh, 520px); }
+  .carousel { height: clamp(340px, 56vh, 480px); }
   .carousel-item.is-next { transform: translateX(160px) translateZ(-160px) rotateY(-16deg) scale(0.9); }
   .carousel-item.is-prev { transform: translateX(-160px) translateZ(-160px) rotateY(16deg) scale(0.9); }
 }
