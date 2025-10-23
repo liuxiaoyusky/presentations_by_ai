@@ -1,0 +1,66 @@
+{
+  "components": [
+    {
+      "file": "components/kpi-3up-cards.png",
+      "label": "KPI 3‑up cards",
+      "sourcePage": 2,
+      "tags": ["kpi", "metrics", "cards", "3up"]
+    },
+    {
+      "file": "components/photo-frame-shadow.png",
+      "label": "Photo frame with shadow",
+      "sourcePage": 4,
+      "tags": ["image", "frame", "shadow"]
+    },
+    {
+      "file": "components/quote-overlay-fullbleed.png",
+      "label": "Quote overlay (full‑bleed)",
+      "sourcePage": 6,
+      "tags": ["quote", "headline", "fullbleed"]
+    },
+    {
+      "file": "components/two-column-bullets-visual.png",
+      "label": "Two‑column: bullets + visual",
+      "sourcePage": 7,
+      "tags": ["two-column", "bullets", "visual"]
+    },
+    {
+      "file": "components/three-card-feature-grid.png",
+      "label": "3‑card feature grid",
+      "sourcePage": 8,
+      "tags": ["grid", "cards", "3up"]
+    }
+  ],
+  "templates": [
+    {
+      "file": "templates/cover-title-center.png",
+      "label": "Cover — centered title (dark)",
+      "sourcePage": 1,
+      "tags": ["cover", "title", "dark"]
+    },
+    {
+      "file": "templates/chart-growth-metrics.png",
+      "label": "Chart + growth metrics",
+      "sourcePage": 3,
+      "tags": ["chart", "growth", "metrics"]
+    },
+    {
+      "file": "templates/event-photo-feature.png",
+      "label": "Event photo feature",
+      "sourcePage": 4,
+      "tags": ["event", "photo", "feature"]
+    },
+    {
+      "file": "templates/story-opener-tagline.png",
+      "label": "Story opener — tagline",
+      "sourcePage": 5,
+      "tags": ["story", "opener", "tagline"]
+    },
+    {
+      "file": "templates/feature-3panel.png",
+      "label": "Feature 3‑panel comparison",
+      "sourcePage": 8,
+      "tags": ["features", "comparison", "3panel"]
+    }
+  ]
+}

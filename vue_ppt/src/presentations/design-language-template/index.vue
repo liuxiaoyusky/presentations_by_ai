@@ -21,6 +21,17 @@ import Slide8Checklist from './slide-8-checklist.vue'
 import Slide9FAQ from './slide-9-faq.vue'
 import Slide10CTA from './slide-10-cta.vue'
 import Slide11Poll from './slide-11-poll.vue'
+import Slide12SkillKpi from './slide-12-skill-kpi.vue'
+import Slide13SkillPhoto from './slide-13-skill-photo.vue'
+import Slide14SkillQuote from './slide-14-skill-quote.vue'
+import Slide15SkillTwoCol from './slide-15-skill-two-col.vue'
+import Slide16Skill3Grid from './slide-16-skill-3grid.vue'
+import Slide17TplCover from './slide-17-template-cover.vue'
+import Slide18TplGrowth from './slide-18-template-growth.vue'
+import Slide19TplEvent from './slide-19-template-event.vue'
+import Slide20TplStory from './slide-20-template-story.vue'
+import Slide21Tpl3Panel from './slide-21-template-3panel.vue'
+import Slide22Xiaomi2023 from './slide-22-xiaomi-2023.vue'
 
 const localeOptions = [
   { code: 'zh-Hans', label: 'Chinese', nativeLabel: '简体中文', direction: 'ltr' }
@@ -52,7 +63,18 @@ const slides = [
   Slide8Checklist,
   Slide9FAQ,
   Slide11Poll,
-  Slide10CTA
+  Slide10CTA,
+  Slide12SkillKpi,
+  Slide13SkillPhoto,
+  Slide14SkillQuote,
+  Slide15SkillTwoCol,
+  Slide16Skill3Grid,
+  Slide17TplCover,
+  Slide18TplGrowth,
+  Slide19TplEvent,
+  Slide20TplStory,
+  Slide21Tpl3Panel,
+  Slide22Xiaomi2023
 ]
 </script>
 

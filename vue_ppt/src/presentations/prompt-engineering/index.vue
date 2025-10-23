@@ -24,9 +24,6 @@ import SlideLegal from './slide-09-examples-legal.vue'
 import SlideTemplatesCommon from './slide-10-templates-common.vue'
 import SlideChapter2 from './slide-10a-chapter-2.vue'
 import SlideCostar from './slide-11-costar.vue'
-import SlideCostarRole from './slide-12-costar-role.vue'
-import SlideCostarInstructions from './slide-13-costar-instructions.vue'
-import SlideCostarOutput from './slide-14-costar-output.vue'
 import SlideTemplatesRef from './slide-15-templates-reference.vue'
 import SlideTemplatesLLM from './slide-16-templates-llm.vue'
 import SlideTemplatesQA from './slide-17-templates-qa.vue'
@@ -81,9 +78,6 @@ const slides = [
   SlideChapter2,
   SlideTemplatesCommon,
   SlideCostar,
-  SlideCostarRole,
-  SlideCostarInstructions,
-  SlideCostarOutput,
   SlideTemplatesRef,
   SlideTemplatesLLM,
   SlideTemplatesQA,
