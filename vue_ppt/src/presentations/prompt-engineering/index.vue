@@ -41,6 +41,7 @@ import SlideResInternal from './slide-24-resources-internal.vue'
 import SlideResOthers1 from './slide-25-resources-others-1.vue'
 import SlideResLearning from './slide-27-resources-learning.vue'
 import SlideTakeaways from './slide-28-takeaways.vue'
+import SlideCredits from './slide-29-credits.vue'
 // Additional slides will be reintroduced after polishing 1–4
 // Demo-first: keep it minimal
 
@@ -98,7 +99,8 @@ const slides = [
   SlideResInternal,
   SlideResOthers1,
   SlideResLearning,
-  SlideTakeaways
+  SlideTakeaways,
+  SlideCredits
 ]
 </script>
 
