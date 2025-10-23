@@ -12,7 +12,17 @@ const tabs: { id: TabId; label: string; url: string }[] = [
   { id: 'jimeng', label: 'Jimeng AI Tool Home', url: 'https://jimeng.jianying.com/ai-tool/home' }
 ]
 const active = ref<TabId>('gh')
-const currentUrl = computed(() => tabs.find(t => t.id === active.value)?.url || 'about:blank')
+const currentTab = computed(() => tabs.find(t => t.id === active.value)!)
+const currentUrl = computed(() => currentTab.value?.url || 'about:blank')
+
+// Screenshots for sites that block iframes
+const ghImg = new URL('./assests/github\ prompt\ cook\ book.png', import.meta.url).href
+const jimengImg = new URL('./assests/jimeng.png', import.meta.url).href
+const currentImage = computed(() => {
+  if (active.value === 'gh') return ghImg
+  if (active.value === 'jimeng') return jimengImg
+  return ''
+})
 </script>
 
 <template>
@@ -34,9 +44,30 @@ const currentUrl = computed(() => tabs.find(t => t.id === active.value)?.url || 
     </div>
 
     <div class="mt-6 rounded-3xl border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-xl p-3 md:p-4">
+      <div class="flex items-center justify-between gap-3 mb-3">
+        <span class="text-slate-600 text-xs md:text-sm truncate">{{ currentUrl }}</span>
+        <a :href="currentUrl" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 text-white text-sm shadow hover:bg-slate-800">
+          Open in new tab
+        </a>
+      </div>
+
       <Transition name="fade" mode="out-in">
         <div :key="active">
-          <WebEmbed :src="currentUrl" title="Reference website" height="68vh" />
+          <template v-if="currentImage">
+            <div class="rounded-xl border border-slate-200/60 bg-white p-2 md:p-3 flex items-center justify-center">
+              <a :href="currentUrl" target="_blank" rel="noopener" class="block">
+                <img
+                  :src="currentImage"
+                  alt="Site preview"
+                  class="block max-w-[820px] w-full h-auto rounded-lg shadow-sm"
+                />
+              </a>
+            </div>
+          </template>
+          <template v-else>
+            <WebEmbed :src="currentUrl" title="Reference website" height="68vh" />
+          </template>
         </div>
       </Transition>
     </div>
