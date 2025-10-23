@@ -6,7 +6,7 @@ const table = `| Service | Type | Website | Notes |
 |---------|------|--------|-------|
 | **VPai** | Internal AI platform | url(https://ai-vista-launchpad-magic.vercel.app) | • Internal entry for GPT and Gemini models |
 | **Internal N8N** | Workflow automation | url(https://10.1.9.133/home/workflows) | • Internal workflow automation platform |
-| **Current AI Subscription Accounts** | Internal AI subscription account lists | url(https://xcn0uugwk9vs.feishu.cn/wiki/RhSEwufftiyS1zklu6jcyRrAnwg?from=from_copylink) | Account: it.subscribe.vp@gmail.com\\nPassword: Vp12345! |`
+| **Current AI Subscription Accounts** | Internal AI subscription account lists | url(https://xcn0uugwk9vs.feishu.cn/wiki/AC7mww46Ti3UfPk6x30cUlXknYf?table=tbl1f9tmBkbwBCr1&view=vew1kMHuXB) | Account: it.subscribe.vp@gmail.com\\nPassword: Vp12345! |`
 </script>
 
 <template>
