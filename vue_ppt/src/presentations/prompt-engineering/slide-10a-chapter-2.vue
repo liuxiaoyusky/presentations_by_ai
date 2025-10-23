@@ -13,8 +13,8 @@ const title = '2. Frameworks'
     </div>
 
     <div class="rounded-2xl border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-xl p-6 md:p-8">
-      <span class="font-semibold">2.1 General Framework<br></span>
-      <span class="font-semibold">2.2 Co-STAR Framework<br></span>
+      <span class="font-semibold">2.1 Markdown Format<br></span>
+      <span class="font-semibold">2.2 CO·STAR Framework<br></span>
       <span class="font-semibold">2.3 Reference and Adapt Website Prompts<br></span>
       <span class="font-semibold">2.4 Live Demo<br></span>
     </div>

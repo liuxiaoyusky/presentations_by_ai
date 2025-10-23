@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import WebEmbed from '@/shared/components/WebEmbed.vue'
+
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-const title = '2.1 General Framework'
+const title = '2.1 Markdown Format'
 const composite = 'Composite (simplified): Task + Background + Output'
 const note = 'Note: Not mandatory — clarity and accuracy trump everything. Think of essay structures (thesis + evidence + counter + conclusion).'
+
+const previewUrl = 'https://markdownlivepreview.com/'
 </script>
 
 <template>
@@ -10,14 +14,20 @@ const note = 'Note: Not mandatory — clarity and accuracy trump everything. Thi
     <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#93AD90] via-[#F4CDA5] to-[#E26A6A]">
       {{ title }}
     </h2>
-    <div class="mt-6 rounded-2xl border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-xl p-6 md:p-8">
-      <p class="text-xl md:text-2xl font-semibold text-slate-900">{{ composite }}</p>
-      <p class="mt-3 text-slate-700 text-lg md:text-xl">{{ note }}</p>
-    </div>
+
+    <article class="mt-6 rounded-2xl border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-xl p-4 md:p-6">
+      <div class="flex items-center justify-between gap-3 mb-3">
+        <h3 class="text-xl md:text-2xl font-bold text-slate-900">Live Markdown Preview</h3>
+        <a :href="previewUrl" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 text-white text-sm shadow hover:bg-slate-800">
+          Open in new tab
+        </a>
+      </div>
+      <WebEmbed :src="previewUrl" title="Markdown Live Preview" height="68vh" />
+    </article>
   </section>
 </template>
 
 <style scoped>
 /* Tailwind utilities */
 </style>
-

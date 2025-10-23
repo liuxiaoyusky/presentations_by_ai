@@ -66,7 +66,7 @@ const currentImage = computed(() => {
             </div>
           </template>
           <template v-else>
-            <WebEmbed :src="currentUrl" title="Reference website" height="68vh" />
+            <WebEmbed :src="currentUrl" title="Reference website" height="min(68vh, 400px)" />
           </template>
         </div>
       </Transition>
