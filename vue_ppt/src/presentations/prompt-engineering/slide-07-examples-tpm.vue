@@ -193,7 +193,7 @@ const mdOutput = `# Slide 1: Understanding CoSTAR and Markdown
     <div v-if="isActive && !isPreview" class="bg-overlay" aria-hidden="true"></div>
 
     <div class="slide-content">
-      <h2 class="inline-block text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#93AD90] via-[#F4CDA5] to-[#E26A6A]">1.5.2 Technical Project Manager</h2>
+      <h2 class="inline-block text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#93AD90] via-[#F4CDA5] to-[#E26A6A]">1.5.2 AI-PPT Template Generator</h2>
       <p class="mt-3 text-slate-700 text-lg md:text-2xl">Generate a Markdown slide deck from a topic using a universal prompt.</p>
     </div>
 

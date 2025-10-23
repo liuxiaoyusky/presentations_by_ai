@@ -2,6 +2,7 @@
 import SlideSection from '@/shared/layouts/SlideSection.vue'
 import FlowShowcase from '@/shared/layouts/FlowShowcase.vue'
 import MarkdownBlock from '@/shared/components/MarkdownBlock.vue'
+import { ref } from 'vue'
 
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 
@@ -40,6 +41,23 @@ const panel2 = `**Legal Risk Analysis:**
 
 **Revised Clause:**
 "Party B shall deliver the goods within 3 business days (Monday to Friday, excluding public holidays) after receiving the payment. In case of delayed delivery due to Party B's fault, liquidated damages of 0.05% of the contract amount per day will be charged, subject to a maximum of 5% of the total contract value. This provision shall not apply in cases of force majeure or circumstances beyond Party B's reasonable control."`
+
+// Copy helpers
+const copying = ref<number | null>(null)
+const copyText = async (text: string, id: number) => {
+  try {
+    await navigator.clipboard.writeText(text)
+  } catch {
+    const ta = document.createElement('textarea')
+    ta.value = text
+    ta.style.position = 'fixed'; ta.style.opacity = '0'
+    document.body.appendChild(ta); ta.focus(); ta.select()
+    try { document.execCommand('copy') } catch {}
+    document.body.removeChild(ta)
+  }
+  copying.value = id
+  setTimeout(() => { if (copying.value === id) copying.value = null }, 1200)
+}
 </script>
 
 <template>
@@ -53,15 +71,33 @@ const panel2 = `**Legal Risk Analysis:**
 
     <FlowShowcase :steps="steps" :is-active="isActive">
       <template #panel0>
-        <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Template</h3>
+        <div class="panel-head">
+          <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Template</h3>
+          <button type="button" class="copy-btn" @click="copyText(panel0, 0)">
+            <span v-if="copying === 0">Copied</span>
+            <span v-else>Copy</span>
+          </button>
+        </div>
         <MarkdownBlock :content="panel0" />
       </template>
       <template #panel1>
-        <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Sample Input</h3>
+        <div class="panel-head">
+          <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Sample Input</h3>
+          <button type="button" class="copy-btn" @click="copyText(panel1, 1)">
+            <span v-if="copying === 1">Copied</span>
+            <span v-else>Copy</span>
+          </button>
+        </div>
         <MarkdownBlock :content="panel1" />
       </template>
       <template #panel2>
-        <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Sample Output</h3>
+        <div class="panel-head">
+          <h3 class="text-2xl md:text-3xl font-bold text-slate-900">Sample Output</h3>
+          <button type="button" class="copy-btn" @click="copyText(panel2, 2)">
+            <span v-if="copying === 2">Copied</span>
+            <span v-else>Copy</span>
+          </button>
+        </div>
         <MarkdownBlock :content="panel2" />
       </template>
     </FlowShowcase>
@@ -69,4 +105,13 @@ const panel2 = `**Legal Risk Analysis:**
 </template>
 
 <style scoped>
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.copy-btn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.35rem 0.7rem; border-radius: 999px; border: 1px solid rgba(148, 163, 184, 0.28);
+  background: #0f172a; color: #f8fafc; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.02em;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12); transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+.copy-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(15, 23, 42, 0.18); background: #111827; }
+.copy-btn:active { transform: translateY(0); }
 </style>

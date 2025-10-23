@@ -26,13 +26,13 @@ const title = '1.5 Good Prompt Example'
                 </ul>
               </li>
               <li>
-                <span class="font-semibold">1.5.2 Technical Project Manager</span>
+                <span class="font-semibold">1.5.2 AI-PPT Template Generator</span>
                 <ul class="mt-1 list-disc pl-6">
-                  <li>See 2.2 Co-STAR Framework for comprehensive breakdown.</li>
+                  <li>Generate a Markdown Slide Deck.</li>
                 </ul>
               </li>
               <li>
-                <span class="font-semibold">1.5.3 Daily Job Planner</span>
+                <span class="font-semibold">1.5.3 Todos Extractor</span>
                 <ul class="mt-1 list-disc pl-6">
                   <li>Constraints → schedule → table output</li>
                 </ul>

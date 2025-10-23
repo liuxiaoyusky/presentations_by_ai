@@ -31,6 +31,34 @@ const setActive = (index: number) => {
 
 const isStepActive = (index: number) => index === active.value
 
+// Copy helpers for current panel
+const copying = ref<number | null>(null)
+const getContentFor = (index: number) => {
+  switch (index) {
+    case 0: return mdSimpleInput
+    case 1: return mdSimpleOutput
+    case 2: return mdPromptInput
+    default: return mdPromptOutput
+  }
+}
+const copyContent = async (index: number) => {
+  const text = getContentFor(index)
+  try {
+    await navigator.clipboard.writeText(text)
+  } catch {
+    const ta = document.createElement('textarea')
+    ta.value = text
+    ta.style.position = 'fixed'
+    ta.style.opacity = '0'
+    document.body.appendChild(ta)
+    ta.focus(); ta.select()
+    try { document.execCommand('copy') } catch {}
+    document.body.removeChild(ta)
+  }
+  copying.value = index
+  setTimeout(() => { if (copying.value === index) copying.value = null }, 1200)
+}
+
 const mdSimpleInput = `I need to email my manager about requesting time off next week for a family event.
 
 I want to be professional but also show that I've planned ahead.`
@@ -124,7 +152,13 @@ Alex`
     <div class="carousel slide-content" role="region" aria-live="polite" aria-label="Email Writer content">
       <div class="carousel-item" :class="carouselStates[0]">
         <article class="panel">
-          <h3 class="panel-title">Simple Input</h3>
+          <div class="panel-head">
+            <h3 class="panel-title">Simple Input</h3>
+            <button type="button" class="copy-btn" :aria-label="`Copy Simple Input`" @click="copyContent(0)">
+              <span v-if="copying === 0">Copied</span>
+              <span v-else>Copy</span>
+            </button>
+          </div>
           <div class="panel-content">
             <MarkdownBlock :content="mdSimpleInput" />
           </div>
@@ -132,7 +166,13 @@ Alex`
       </div>
       <div class="carousel-item" :class="carouselStates[1]">
         <article class="panel">
-          <h3 class="panel-title">Simple Output</h3>
+          <div class="panel-head">
+            <h3 class="panel-title">Simple Output</h3>
+            <button type="button" class="copy-btn" :aria-label="`Copy Simple Output`" @click="copyContent(1)">
+              <span v-if="copying === 1">Copied</span>
+              <span v-else>Copy</span>
+            </button>
+          </div>
           <div class="panel-content">
             <MarkdownBlock :content="mdSimpleOutput" />
           </div>
@@ -140,7 +180,13 @@ Alex`
       </div>
       <div class="carousel-item" :class="carouselStates[2]">
         <article class="panel">
-          <h3 class="panel-title">Prompt Input</h3>
+          <div class="panel-head">
+            <h3 class="panel-title">Prompt Input</h3>
+            <button type="button" class="copy-btn" :aria-label="`Copy Prompt Input`" @click="copyContent(2)">
+              <span v-if="copying === 2">Copied</span>
+              <span v-else>Copy</span>
+            </button>
+          </div>
           <div class="panel-content">
             <MarkdownBlock :content="mdPromptInput" />
           </div>
@@ -148,7 +194,13 @@ Alex`
       </div>
       <div class="carousel-item" :class="carouselStates[3]">
         <article class="panel">
-          <h3 class="panel-title">Prompt Output</h3>
+          <div class="panel-head">
+            <h3 class="panel-title">Prompt Output</h3>
+            <button type="button" class="copy-btn" :aria-label="`Copy Prompt Output`" @click="copyContent(3)">
+              <span v-if="copying === 3">Copied</span>
+              <span v-else>Copy</span>
+            </button>
+          </div>
           <div class="panel-content">
             <MarkdownBlock :content="mdPromptOutput" />
           </div>
@@ -207,6 +259,24 @@ Alex`
 .panel { width: clamp(360px, 88%, 960px); max-height: 100%; display: flex; flex-direction: column; overflow: hidden; border-radius: 20px; box-shadow: 0 40px 80px rgba(15, 23, 42, 0.22); border: 1px solid rgba(255, 255, 255, 0.35); background: rgba(255, 255, 255, 0.95); padding: clamp(1rem, 3vw, 1.5rem); }
 .carousel-item.is-active .panel { background: #ffffff; border-color: rgba(148, 163, 184, 0.22); box-shadow: 0 50px 100px rgba(15, 23, 42, 0.28); }
 .panel-title { margin: 0 0 0.5rem; font-size: clamp(1.2rem, 2.4vw, 1.6rem); font-weight: 800; color: #0f172a; }
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+.copy-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(15, 23, 42, 0.18); background: #111827; }
+.copy-btn:active { transform: translateY(0); }
 .panel-content { flex: 1 1 auto; min-height: 0; overflow: auto; }
 
 .carousel-item.is-active { z-index: 3; transform: translateX(0) translateZ(120px) rotateY(0deg); filter: none; }
