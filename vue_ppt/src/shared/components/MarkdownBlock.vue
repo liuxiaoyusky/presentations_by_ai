@@ -28,6 +28,8 @@ function renderInline(text: string): string {
   text = text.replace(/(^|\W)\*([^*]+)\*(?=\W|$)/g, '$1<em>$2<\/em>')
   // inline code `code`
   text = text.replace(/`([^`]+)`/g, '<code>$1<\/code>')
+  // literal \n sequences -> line breaks (outside tables too)
+  text = text.replace(/\\n/g, '<br/>')
   return text
 }
 

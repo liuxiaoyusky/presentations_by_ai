@@ -4,11 +4,11 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const title = '3. Data Security & Privacy'
 const table1 = `| Risk Area | Description | Solutions |
 |-----------|-------------|-----------|
-| **Input** | Users may share Personal information, financial, or confidential data — be cautious | • Minimize data\\n• Filter inappropriate content |
-| **Output** | LLMs can leak internal patterns; filter outputs to avoid sensitive disclosures | • Post-generation filters\\n• Human review for critical use |
-| **Abuse** | Models can be misused; enforce limits/monitoring (e.g., no investment advice in support workflows) | • Rate limits/quotas\\n• Behavior monitoring\\n• Prompt-level guardrails |
-| **Access Control** | Restrict who/what can access models and interfaces | • MFA (Multi-Factor Authentication)\\n• Periodic audits/log reviews |
-| **Storage** | Sensitive data at rest | • Encrypt\\n• Least-privilege access\\n• Prefer internal models for sensitive scenarios |`
+| **Input** | Users may share Personal information, financial, or confidential data — be cautious | - Minimize data\\n- Filter inappropriate content |
+| **Output** | LLMs can leak internal patterns; filter outputs to avoid sensitive disclosures | - Post-generation filters\\n- Human review for critical use |
+| **Abuse** | Models can be misused; enforce limits/monitoring (e.g., no investment advice in support workflows) | - Rate limits/quotas\\n- Behavior monitoring\\n- Prompt-level guardrails |
+| **Access Control** | Restrict who/what can access models and interfaces | - MFA (Multi-Factor Authentication)\\n- Periodic audits/log reviews |
+| **Storage** | Sensitive data at rest | - Encrypt\\n- Least-privilege access\\n- Prefer internal models for sensitive scenarios |`
 </script>
 
 <template>
