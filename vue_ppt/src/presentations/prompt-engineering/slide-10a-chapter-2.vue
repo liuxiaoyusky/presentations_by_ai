@@ -16,7 +16,7 @@ const title = '2. Frameworks'
       <span class="font-semibold">2.1 General Framework<br></span>
       <span class="font-semibold">2.2 Co-STAR Framework<br></span>
       <span class="font-semibold">2.3 Reference and Adapt Website Prompts<br></span>
-      <span class="font-semibold">2.4 Use LLM to Write Prompts<br></span>
+      <span class="font-semibold">2.4 Live Demo<br></span>
     </div>
   </section>
 </template>
