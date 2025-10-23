@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-const title = '2.2 Co-STAR Framework'
+const title = '2.2.1 Co-STAR Framework'
 </script>
 
 <template>
