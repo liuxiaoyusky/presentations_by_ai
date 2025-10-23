@@ -2,21 +2,34 @@
 import { ref, watch } from 'vue'
 
 const props = defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-const title = 'Chapter 2 Q&A Summary'
+const title = 'Chapter 1 Q&A Summary'
+
 const qas = [
-  { q: "Q1: Where can I play around with prompts?", a: "A: Connect ChatGPT with VPai, login with the team's account." },
-  { q: "Q2: How to cook my own prompt?", a: "A: Ask LLM to update my prompt by Co-STAR format." },
-  { q: "Q3: I'm stuck writing prompts. Where can I find examples to copy?", a: "A: Check GitHub repositories, OpenAI Cookbook, AI tool websites, and community forums for ready-made prompts you can adapt." }
+  {
+    q: "What's the difference between prompt design and just typing random words?",
+    a: 'Prompt design uses structures to help LLM focus and give less vague response.'
+  },
+  {
+    q: 'Why does my AI sometimes give irrelevant answers?',
+    a: 'Your prompt might be too vague. Be specific about what you want, who it\'s for, and how it should be formatted.'
+  },
+  {
+    q: 'How can I make my prompts better without being an expert?',
+    a: 'Use clear words, be specific, keep it short, avoid ambiguity, give helpful guidance, structure it well, and provide examples.'
+  }
 ]
 
-// Start with all answers hidden; also reset whenever the slide becomes active
+// Start hidden; reset on slide enter
 const open = ref<number | null>(null)
 watch(() => props.isActive, (val) => { if (val) open.value = null })
 </script>
 
 <template>
   <section class="container mx-auto max-w-6xl px-6 md:px-8 lg:px-12 py-12 lg:py-16">
-    <h2 class="inline-block text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#93AD90] via-[#F4CDA5] to-[#E26A6A]">{{ title }}</h2>
+    <h2 class="inline-block text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#93AD90] via-[#F4CDA5] to-[#E26A6A]">
+      {{ title }}
+    </h2>
+
     <ul class="mt-6 space-y-3">
       <li
         v-for="(item, i) in qas"
@@ -24,11 +37,11 @@ watch(() => props.isActive, (val) => { if (val) open.value = null })
         class="overflow-hidden rounded-3xl border border-slate-200/30 bg-white/70 backdrop-blur-md shadow-xl"
       >
         <button @click="open = open === i ? null : i" class="flex w-full items-center justify-between px-6 py-4 text-left">
-          <span class="text-slate-900 font-semibold">{{ item.q }}</span>
+          <span class="text-slate-900 font-semibold">Q{{ i + 1 }}: {{ item.q }}</span>
           <svg class="h-4 w-4 text-slate-700 transition-transform" :class="{ 'rotate-180': open === i }" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div v-show="open === i" class="px-6 pb-6 text-slate-700 text-sm md:text-base leading-relaxed">
-          {{ item.a }}
+          A: {{ item.a }}
         </div>
       </li>
     </ul>
@@ -36,5 +49,5 @@ watch(() => props.isActive, (val) => { if (val) open.value = null })
 </template>
 
 <style scoped>
-/* Arrow rotates; content reveal uses v-show for minimal motion like template */
 </style>
+

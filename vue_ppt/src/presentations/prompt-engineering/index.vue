@@ -21,6 +21,7 @@ import SlideEmail from './slide-06-examples-email.vue'
 import SlideTpm from './slide-07-examples-tpm.vue'
 import SlidePlanner from './slide-08-examples-planner.vue'
 import SlideLegal from './slide-09-examples-legal.vue'
+import SlideCh1QA from './slide-09a-chapter1-qa.vue'
 import SlideTemplatesCommon from './slide-10-templates-common.vue'
 import SlideChapter2 from './slide-10a-chapter-2.vue'
 import SlideCostarSubdir from './slide-10aa-costar-subdir.vue'
@@ -78,6 +79,7 @@ const slides = [
   SlideTpm,
   SlidePlanner,
   SlideLegal,
+  SlideCh1QA,
   SlideChapter2,
   SlideTemplatesCommon,
   SlideCostarSubdir,
