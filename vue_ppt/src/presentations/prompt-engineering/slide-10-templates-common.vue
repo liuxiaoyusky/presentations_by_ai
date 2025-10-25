@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import WebEmbed from '@/shared/components/WebEmbed.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const title = '2.1 Markdown Format'
 const composite = 'Composite (simplified): Task + Background + Output'
 const note = 'Note: Not mandatory — clarity and accuracy trump everything. Think of essay structures (thesis + evidence + counter + conclusion).'
 
 const previewUrl = 'https://markdownlivepreview.com/'
+const markdownImg = new URL('./assests/markdown.png', import.meta.url).href
 </script>
 
 <template>
@@ -23,7 +22,15 @@ const previewUrl = 'https://markdownlivepreview.com/'
           Open in new tab
         </a>
       </div>
-      <WebEmbed :src="previewUrl" title="Markdown Live Preview" height="68vh" />
+      <div class="rounded-xl border border-slate-200/60 bg-white p-2 md:p-3 flex items-center justify-center">
+        <a :href="previewUrl" target="_blank" rel="noopener" class="block">
+          <img
+            :src="markdownImg"
+            alt="Markdown Live Preview"
+            class="block max-w-[820px] w-full h-auto rounded-lg shadow-sm"
+          />
+        </a>
+      </div>
     </article>
   </section>
 </template>
