@@ -19,7 +19,7 @@ fi
 
 # 启动开发服务器（后台运行）
 echo "使用Node.js $(node --version) 启动Vue项目..."
-echo "项目将在 http://localhost:5173/ 上运行"
+echo "项目将在 http://localhost:5175/ 上运行"
 echo "服务器已在后台启动，日志保存在 /tmp/vite.log"
 echo "使用 'tail -f /tmp/vite.log' 查看实时日志"
 echo "使用 './stop.sh' 停止服务器"
@@ -31,7 +31,7 @@ nohup npm run dev > /tmp/vite.log 2>&1 &
 sleep 3
 
 # 检查服务器是否成功启动
-if curl -s http://localhost:5173 > /dev/null; then
+if curl -s http://localhost:5175 > /dev/null; then
     echo "✅ 服务器启动成功！"
 else
     echo "❌ 服务器启动失败，请检查日志：cat /tmp/vite.log"

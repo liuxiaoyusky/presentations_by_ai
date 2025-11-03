@@ -19,7 +19,7 @@ fi
 
 # 启动开发服务器
 echo "使用Node.js $(node --version) 启动Vue项目..."
-echo "项目将在 http://localhost:5173/ 上运行"
+echo "项目将在 http://localhost:5175/ 上运行"
 echo "按 Ctrl+C 停止服务器"
 echo "----------------------------------------"
 
